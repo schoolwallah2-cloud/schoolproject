@@ -1,0 +1,32 @@
+/* Import Google Fonts FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Tailwind directives must come after imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #faf8f5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .premium-card {
+    @apply bg-white/90 backdrop-blur-sm border border-premium-silver/20 shadow-xl;
+  }
+  
+  .premium-button {
+    @apply bg-gradient-to-r from-premium-gold to-premium-accent text-premium-navy font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .premium-button-outline {
+    @apply border-2 border-premium-gold text-premium-gold hover:bg-premium-gold hover:text-premium-navy font-semibold px-8 py-4 rounded-lg transition-all duration-300;
+  }
+}
