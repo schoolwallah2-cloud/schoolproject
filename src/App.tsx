@@ -1,3 +1,5 @@
+import { supabase } from './lib/supabaseClient'
+console.log('Supabase client loaded:', !!supabase)
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
